@@ -1,0 +1,31 @@
+name:                invertible-syntax-parsec
+version:             0.1.0.0
+synopsis:            Turn Parsec type into instance of invertible-syntax-poly.
+description:         Turn Parsec type into instance of invertible-syntax-poly.
+homepage:            http://twitter.com/khibino
+license:             BSD3
+license-file:        LICENSE
+author:              Kei Hibino <ex8k.hibino@gmail.com>
+maintainer:          Kei Hibino <ex8k.hibino@gmail.com>
+category:            Text
+stability:           experimental
+build-type:          Simple
+cabal-version:       >=1.6
+
+library
+  --hs-source-dirs:       src
+  exposed-modules:
+                        Text.Syntax.Parser.Parsec
+                        Text.Syntax.Parser.Parsec.Check
+  
+  build-depends:        base < 5
+                      , invertible-syntax-poly
+                      , parsec >= 3
+
+source-repository head
+  type:     git
+  location: https://github.com/khibino/haskell-invertible-syntax-parsec
+
+source-repository head
+  type:     mercurial
+  location: https://bitbucket.org/khibino/haskell-invertible-syntax-parsec

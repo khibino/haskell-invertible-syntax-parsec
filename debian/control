@@ -1,0 +1,64 @@
+Source: haskell-invertible-syntax-parsec
+Priority: extra
+Section: haskell
+Maintainer: Kei HIBINO <hibi@utmc.or.jp>
+Build-Depends: debhelper (>= 7.0),
+               haskell-devscripts (>= 0.8),
+               cdbs,
+               ghc,
+               ghc-prof,
+               libghc-invertible-syntax-poly-dev,
+               libghc-invertible-syntax-poly-prof,
+               libghc-parsec3-dev (>= 3),
+               libghc-parsec3-prof (>= 3)
+Build-Depends-Indep: ghc-doc,
+                     libghc-invertible-syntax-poly-doc,
+                     libghc-parsec3-doc (>= 3)
+Standards-Version: 3.9.1
+Homepage: http://twitter.com/khibino
+
+Package: libghc-invertible-syntax-parsec-dev
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${haskell:Depends},
+         ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: Turn Parsec type into instance of invertible-syntax-poly.
+ Turn Parsec type into instance of invertible-syntax-poly.
+ .
+  Author: Kei Hibino <ex8k.hibino@gmail.com>
+  Upstream-Maintainer: Kei Hibino <ex8k.hibino@gmail.com>
+ .
+ This package contains the normal library files.
+
+Package: libghc-invertible-syntax-parsec-prof
+Architecture: any
+Depends: ${haskell:Depends},
+         ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: Turn Parsec type into instance of invertible-syntax-poly.
+ Turn Parsec type into instance of invertible-syntax-poly.
+ .
+  Author: Kei Hibino <ex8k.hibino@gmail.com>
+  Upstream-Maintainer: Kei Hibino <ex8k.hibino@gmail.com>
+ .
+ This package contains the libraries compiled with profiling enabled.
+
+Package: libghc-invertible-syntax-parsec-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends},
+         ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Description: Turn Parsec type into instance of invertible-syntax-poly.
+ Turn Parsec type into instance of invertible-syntax-poly.
+ .
+  Author: Kei Hibino <ex8k.hibino@gmail.com>
+  Upstream-Maintainer: Kei Hibino <ex8k.hibino@gmail.com>
+ .
+ This package contains the documentation files.
