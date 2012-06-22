@@ -25,7 +25,7 @@ Depends: ${shlibs:Depends},
 Recommends: ${haskell:Recommends}
 Suggests: ${haskell:Suggests}
 Provides: ${haskell:Provides}
-Description: Turn Parsec type into instance of invertible-syntax-poly.
+Description: Syntax instance of Parsec type
  Turn Parsec type into instance of invertible-syntax-poly.
  .
   Author: Kei Hibino <ex8k.hibino@gmail.com>
@@ -40,7 +40,7 @@ Depends: ${haskell:Depends},
 Recommends: ${haskell:Recommends}
 Suggests: ${haskell:Suggests}
 Provides: ${haskell:Provides}
-Description: Turn Parsec type into instance of invertible-syntax-poly.
+Description: Syntax instance of Parsec type
  Turn Parsec type into instance of invertible-syntax-poly.
  .
   Author: Kei Hibino <ex8k.hibino@gmail.com>
@@ -55,7 +55,7 @@ Depends: ${haskell:Depends},
          ${misc:Depends}
 Recommends: ${haskell:Recommends}
 Suggests: ${haskell:Suggests}
-Description: Turn Parsec type into instance of invertible-syntax-poly.
+Description: Syntax instance of Parsec type
  Turn Parsec type into instance of invertible-syntax-poly.
  .
   Author: Kei Hibino <ex8k.hibino@gmail.com>
