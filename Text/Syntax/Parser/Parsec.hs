@@ -7,10 +7,10 @@ module Text.Syntax.Parser.Parsec (
   runPolyParser
   ) where
 
-import Text.Syntax.Poly.Instances ()
+import Text.Syntax.Parser.Instances ()
 import Text.Syntax.Poly
   ((<||>), TryAlternative(try, (<|>)),
-   StreamSyntax (..), Syntax(..), RunParserT)
+   StreamSyntax (..), Syntax(..), RunParserT, RunParserA)
 
 import Text.Parsec (ParsecT, Stream, ParseError)
 import qualified Text.Parsec as P
@@ -35,3 +35,8 @@ runPolyParser :: (Eq tok, Show tok) =>
                  String -> RunParserT tok [tok] a ParseError
 runPolyParser srcName parser =
   fmap (flip (,) []) . P.parse parser srcName
+
+runPolyParserA :: (Eq tok, Show tok, Functor m, Monad m) =>
+                  String -> RunParserA m tok [tok] a ParseError
+runPolyParserA srcName parser =
+  fmap (fmap (flip (,) [])) . P.runParserT parser () srcName
