@@ -2,7 +2,7 @@
 {-# LANGUAGE Rank2Types #-}
 
 module Text.Syntax.Parser.Parsec.Check (
-  -- * Handy check isomorphism functions.
+  -- * Handy isomorphism check functions.
   printParseIsoDefault',  printParseIsoDefault
   ) where
 
