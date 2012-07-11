@@ -16,7 +16,7 @@ library
   --hs-source-dirs:       src
   exposed-modules:
                         Text.Syntax.Parser.Parsec
-                        Text.Syntax.Parser.Parsec.Check
+                        Text.Syntax.Check.Parsec
   
   build-depends:        base < 5
                       , invertible-syntax-poly

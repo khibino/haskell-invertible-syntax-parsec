@@ -1,7 +1,7 @@
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE Rank2Types #-}
 
-module Text.Syntax.Parser.Parsec.Check (
+module Text.Syntax.Check.Parsec (
   -- * Handy isomorphism check functions.
   printParseIsoDefault',  printParseIsoDefault
   ) where
