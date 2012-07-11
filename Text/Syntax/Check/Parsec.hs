@@ -9,7 +9,7 @@ module Text.Syntax.Check.Parsec (
 import Text.Syntax.Poly (SyntaxT)
 
 import Text.Syntax.Printer.List (runPolyPrinter)
-import Text.Syntax.Poly.Check (printParseIso', printParseIso)
+import Text.Syntax.Check.Prim (printParseIso', printParseIso)
 
 import Text.Syntax.Parser.Parsec (runPolyParser)
 
