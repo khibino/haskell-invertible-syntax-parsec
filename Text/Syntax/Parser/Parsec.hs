@@ -10,7 +10,7 @@ module Text.Syntax.Parser.Parsec (
 import Text.Syntax.Parser.Instances ()
 import Text.Syntax.Poly
   ((<||>), TryAlternative(try, (<|>)),
-   StreamSyntax (..), Syntax(..), RunParser, RunParserM)
+   Syntax(..), RunParser, RunParserM)
 
 import Text.Parsec (ParsecT, Stream, ParseError)
 import qualified Text.Parsec as P
@@ -23,12 +23,8 @@ instance TryAlternative (ParsecT s u m)
   where try = P.try
         p <|> q = try p <||> q
 
-instance (Eq t, Show t, Stream [t] m t) =>
-         StreamSyntax [t] (ParsecT [t] u m)
-  where string tks = P.tokens show (\pos _ -> pos) tks >> return ()
-
-instance (StreamSyntax [t] (ParsecT [t] u m), Stream [t] m t, Show t) =>
-         Syntax t [t] (ParsecT [t] u m)
+instance (Stream [t] m t, Show t) =>
+         Syntax t (ParsecT [t] u m)
   where token = P.anyToken
 
 runPolyParser :: (Eq tok, Show tok) =>
@@ -36,7 +32,7 @@ runPolyParser :: (Eq tok, Show tok) =>
 runPolyParser srcName parser =
   P.parse parser srcName
 
-runPolyParserA :: (Eq tok, Show tok, Functor m, Monad m) =>
+runPolyParserM :: (Eq tok, Show tok, Functor m, Monad m) =>
                   String -> RunParserM m tok [tok] a ParseError
-runPolyParserA srcName parser =
+runPolyParserM srcName parser =
   P.runParserT parser () srcName
