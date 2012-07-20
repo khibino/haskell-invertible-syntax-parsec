@@ -140,7 +140,8 @@ prog1 =  "{(a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^
 prog2 :: String
 prog2 =  "{(a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));](a+(b*c));((a+b)*(z+x));{((a+t)*((b+(a+c))^(c+d)));((a+t)*(b+(a+c)))^(c+d);}[(a+(b*c));((a+b)*(z+x));]a/b-c*d^e;}"
 
-prog3 = "{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
+prog3 :: String
+prog3 =  "{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));{(a+(b*c));}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
 
 allExpTests :: [String]
 allExpTests =  [ex0, ex1, ex2, ex3, ex4,
@@ -149,16 +150,6 @@ allExpTests =  [ex0, ex1, ex2, ex3, ex4,
 allProgTests :: [String]
 allProgTests =  [prog0, prog1, prog2, prog3]
 
-
--- ppIso' :: Eq a => BinSyntax a -> a -> Either String a
--- ppIso' =  printParseIsoDefault'
-
--- programPPIso' :: Program -> Either String Program
--- programPPIso' =  ppIso' program
--- programPPIso' =  printParseIsoDefault' program
-
-ppIso :: Eq a => BinSyntax a -> [Char] -> Either String a
-ppIso =  printParseIsoDefault
 
 exprPPIso :: [Char] -> Either String Exp
 exprPPIso =  printParseIsoDefault expr
@@ -174,6 +165,6 @@ showResult syn =  d where
   d (Left  e) = e
 
 main :: IO ()
-main = mapM_ (putStrLn)
+main = mapM_ putStrLn
        (map (showResult expr    . exprPPIso   ) allExpTests ++
         map (showResult program . programPPIso) allProgTests)
