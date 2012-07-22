@@ -11,7 +11,6 @@ import Text.Syntax.Poly
 import Text.Syntax.Poly.Type (SyntaxT)
 
 import Text.Syntax.Check.Parsec (printParseIsoDefault)
--- import Text.Syntax.Check.Parsec (printParseIsoDefault')
 import Text.Syntax.Printer.List (runPrinter)
 
 import qualified Types as T
@@ -53,9 +52,9 @@ newline =  format "\n"
 (*>|) :: BinSyntax () -> BinSyntax () -> BinSyntax ()
 indent' *>| syn =  indent' *> syn <* newline
 
--- Printer で括弧を出力することを考えた場合、
--- 括弧が必要でない式かどうかを先に試す必要がある。
--- ここでは var であるかどうかを試す。
+-- When printing parened expression,
+-- must check formula without paren or not first.
+-- Check var or not first below.
 uni :: BinSyntax Exp
 uni =  var
   <|>  lParen *> expr <* rParen
