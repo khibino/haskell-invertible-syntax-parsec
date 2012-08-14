@@ -1,16 +1,17 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
+
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE FlexibleContexts #-}
 
 module Text.Syntax.Parser.Parsec (
   -- * Run Syntax as Parsec
-  runPolyParser
+  runAsParsec, runAsParsecM
   ) where
 
 import Text.Syntax.Parser.Instances ()
 import Text.Syntax.Poly
   ((<||>), TryAlternative(try, (<|>)),
-   Syntax(..), RunParser, RunParserM)
+   Syntax(..), RunAsParser, RunAsParserM)
 
 import Text.Parsec (ParsecT, Stream, ParseError)
 import qualified Text.Parsec as P
@@ -27,12 +28,12 @@ instance (Stream [t] m t, Show t) =>
          Syntax t (ParsecT [t] u m)
   where token = P.anyToken
 
-runPolyParser :: (Eq tok, Show tok) =>
-                 String -> RunParser tok [tok] a ParseError
-runPolyParser srcName parser =
+runAsParsec :: (Eq tok, Show tok) =>
+                 String -> RunAsParser tok [tok] a ParseError
+runAsParsec srcName parser =
   P.parse parser srcName
 
-runPolyParserM :: (Eq tok, Show tok, Functor m, Monad m) =>
-                  String -> RunParserM m tok [tok] a ParseError
-runPolyParserM srcName parser =
+runAsParsecM :: (Eq tok, Show tok, Functor m, Monad m) =>
+                  String -> RunAsParserM m tok [tok] a ParseError
+runAsParsecM srcName parser =
   P.runParserT parser () srcName

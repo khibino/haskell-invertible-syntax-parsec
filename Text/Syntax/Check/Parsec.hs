@@ -8,13 +8,13 @@ module Text.Syntax.Check.Parsec (
 
 import Text.Syntax.Poly (SyntaxT)
 
-import Text.Syntax.Printer.List (runPolyPrinter)
+import Text.Syntax.Printer.List (runAsPrinter)
 import Text.Syntax.Check.Prim (printParseIso', printParseIso)
 
-import Text.Syntax.Parser.Parsec (runPolyParser)
+import Text.Syntax.Parser.Parsec (runAsParsec)
 
 printParseIsoDefault' :: (Eq tok, Eq a, Show tok) => SyntaxT tok a -> a -> Either String a
-printParseIsoDefault' =  printParseIso' runPolyPrinter (runPolyParser "<check>")
+printParseIsoDefault' =  printParseIso' runAsPrinter (runAsParsec "<check>")
 
 printParseIsoDefault :: (Eq tok, Eq a, Show tok) => SyntaxT tok a -> [tok] -> Either String a
-printParseIsoDefault =  printParseIso runPolyPrinter (runPolyParser "<check>")
+printParseIsoDefault =  printParseIso runAsPrinter (runAsParsec "<check>")
